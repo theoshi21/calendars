@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Lab Activity 6 </title>
+</head>
+<style>
+
+body{
+font-family: verdana;
+}
+
+img{
+max-width: 100%;
+max-height: 100%;
+vertical-align: top;
+display: inline;
+}
+
+tr td.year{
+writing-mode: vertical-lr;
+transform: rotate(180deg);
+text-align: center;
+font-size: 50px;
+}
+
+table.innerJuly{
+table-layout: fixed;
+border: 10px solid #076cab;
+width: 800px;
+height: 650px;
+text-align: center;
+border-collapse: collapse;
+}
+
+tr.July th{
+background-image: url(July.jpg);
+background-size: 800px 150px;
+background-repeat: no-repeat;
+background-position: top;
+padding: 0px;
+height: 1px;
+font-size: 30px;
+letter-spacing: 10px;
+spacing: 0px;
+color: lightblue;
+-webkit-text-stroke: 2px #fff;
+}
+
+tr.DayJuly th{
+border: 1px dashed black;
+background-color: #85cdfa;
+color: black;
+height: 15px;
+width: 10px;
+line-height: 0;
+}
+
+tr.Jul td{
+border: 1px dashed black;
+height: 15px;
+width: 15px;
+line-height: 0px;
+background-color: #ceebfd;
+transition: 1s;
+}
+
+tr.Jul td:hover{
+background-color: #ffb3b3;
+}
+
+table.innerAug{
+table-layout: fixed;
+border: 10px inset #ffff99;
+width: 800px;
+height: 650px;
+text-align: center;
+border-collapse: collapse;
+}
+
+tr.August th{
+background-image: url(August.jpg);
+background-size: 800px 180px;
+background-repeat: no-repeat;
+background-position: top;
+padding: 0px;
+height: 1px;
+font-size: 30px;
+letter-spacing: 10px;
+spacing: 0px;
+color: black;
+-webkit-text-stroke: 2px #fff;
+}
+
+tr.DayAug th{
+border: 1px dashed black;
+background-color: #990000;
+color: white;
+height: 15px;
+width: 10px;
+line-height: 0;
+}
+
+tr.Aug td{
+border: 1px dashed black;
+height: 15px;
+width: 15px;
+line-height: 0px;
+background-color: #ffff99;
+transition: 1s;
+}
+
+tr.Aug td.ninoy:hover{
+background: url(ninoy.png) center center no-repeat;
+background-size: 120px 85px;
+}
+
+tr.Aug td.hero:hover{
+background: url(hero.jpg) center center no-repeat;
+background-size: 120px 90px;
+}
+
+tr.Aug td:hover{
+background-color: #4d79ff;
+}
+
+table.innerSept{
+table-layout: fixed;
+border: 10px inset gray;
+width: 800px;
+height: 650px;
+text-align: center;
+border-collapse: collapse;
+}
+
+tr.September th{
+background-image: url(September.jpg);
+background-size: cover;
+background-repeat: no-repeat;
+padding: 0px;
+height: 1px;
+font-size: 30px;
+letter-spacing: 10px;
+spacing: 0px;
+color: #ec7d46;
+-webkit-text-stroke: 2px #000;
+}
+
+tr.DaySept th{
+border: 1px dashed black;
+background-color: #ff944d;
+color: white;
+height: 15px;
+width: 10px;
+line-height: 0;
+}
+
+tr.Sept td{
+border: 1px dashed black;
+height: 15px;
+width: 15px;
+line-height: 0px;
+background-color: #ffaa80;
+transition: 1s;
+}
+
+tr.Sept td:hover{
+background-color: #ffcc66;
+}
+
+table.innerOct{
+table-layout: fixed;
+border: 10px inset gray;
+width: 800px;
+height: 650px;
+text-align: center;
+border-collapse: collapse;
+}
+
+tr.October th{
+background-image: url(October.jpeg);
+background-size: cover;
+background-repeat: no-repeat;
+padding: 0px;
+height: 1px;
+font-size: 30px;
+letter-spacing: 10px;
+spacing: 0px;
+color: white;
+-webkit-text-stroke: 2px #000;
+}
+
+tr.DayOct th{
+border: 1px dashed white;
+background-color: #413315;
+color: white;
+height: 15px;
+width: 10px;
+line-height: 0;
+}
+
+tr.Oct td{
+border: 1px dashed white;
+height: 15px;
+width: 15px;
+line-height: 0px;
+background-color: #e68a00;
+transition: 1s;
+color: white;
+}
+
+tr.Oct td:hover{
+background-color: #ffcc66;
+}
+
+table.innerNov{
+table-layout: fixed;
+border: 10px inset #52527a;
+width: 800px;
+height: 650px;
+text-align: center;
+border-collapse: collapse;
+}
+
+tr.November th{
+background-image: url(November.jpg);
+background-size: 790px 200px;
+background-repeat: no-repeat;
+background-position: top;
+padding: 0px;
+height: 1px;
+font-size: 30px;
+letter-spacing: 10px;
+spacing: 0px;
+color: #00264d;
+-webkit-text-stroke: 2px #fff;
+}
+
+tr.DayNov th{
+border: 1px dashed white;
+background-color: #52527a;
+color: white;
+height: 15px;
+width: 10px;
+line-height: 0;
+}
+
+tr.Nov td{
+border: 1px dashed white;
+height: 15px;
+width: 15px;
+line-height: 0px;
+background-color: #7575a3;
+transition: 1s;
+color: white;
+}
+
+tr.Nov td.saint{
+font-size: 9px;
+color: red;
+}
+
+tr.Nov td.boni{
+color: red;
+font-size: 9px;
+}
+
+tr.Nov td.saint:hover{
+background: url(saint.jpeg) center center no-repeat;
+background-size: 120px 85px;
+color: #7575a3;
+}
+
+tr.Nov td.boni:hover{
+background: url(boni.jpeg) center center no-repeat;
+background-size: 120px 85px;
+color: black;
+}
+
+tr.Nov td:hover{
+background-color: white;
+}
+
+table.innerDec{
+table-layout: fixed;
+border: 10px inset #660000;
+width: 800px;
+height: 650px;
+text-align: center;
+border-collapse: collapse;
+}
+
+tr.December th{
+background-image: url(December.jpg);
+background-size: 790px 200px;
+background-repeat: no-repeat;
+background-position: top;
+padding: 0px;
+height: 1px;
+font-size: 30px;
+letter-spacing: 10px;
+spacing: 0px;
+color: #29a329;
+-webkit-text-stroke: 2px #fff;
+}
+
+tr.DayDec th{
+border: 1px dashed black;
+background-color: #990000;
+color: white;
+height: 15px;
+width: 10px;
+line-height: 0;
+}
+
+tr.Dec td{
+border: 1px dashed black;
+height: 15px;
+width: 15px;
+line-height: 0px;
+background-color: #ff8080;
+transition: 1s;
+}
+
+tr.Dec td:hover{
+background-color: #58d058;
+}
+
+tr.Dec td.xmas{
+font-size: 12px;
+color: red;
+}
+
+tr.Dec td.rizal{
+font-size: 12px;
+color: red;
+}
+
+tr.Dec td.xmas:hover{
+background: url(xmas.jpeg) center center no-repeat;
+background-size: 120px 85px;
+color: white;
+}
+
+tr.Dec td.rizal:hover{
+background: url(rizal.jpeg) top center no-repeat;
+background-size: 120px 85px;
+color: black;
+}
+
+
+</style>
+
+
+<body>
+<div style="background-color: lightblue">
+<table class="outerJuly" align=center>
+<tr>
+	<td colspan=2 class="year"> <b><font style="color: #3385ff">2</font><font style="color: white">0</font><font style="color:#3385ff">2</font><font style="color: white">3</font> </b> </td>
+	<td>
+<table class="innerJuly" align=center >
+<tr class="July">	
+<th colspan="7"> JULY </th>
+</tr>
+
+<tr class="DayJuly">
+<th style="background-color: #0a9bf5; color: white"> Su
+<th> Mo </th>
+<th> Tu </th>
+<th> We </th>
+<th> Th </th>
+<th> Fr </th>
+<th> Sa </th>
+</tr>
+
+<tr class="Jul">
+<td class="NewJuly" style="background-color: #e7f5fe"><img src="new.png"></td>
+<td class="FullJuly" style="background-color: #e7f5fe"> <img src="full.png"> </td>
+<td class="FirstJuly" style="background-color: #e7f5fe"> <img src="first.png"> </td>
+<td class="LastJuly" style="background-color: #e7f5fe"> <img src="last.png">  </td>
+<td style="background-color: #e7f5fe">  </td>
+<td style="background-color: #e7f5fe"></td>
+<td style="background-color: #e7f5fe"></td>
+</tr>
+
+<tr class="Jul">
+<td style="background-color: #e7f5fe"></td>
+<td> 1</td>
+<td> 2</td>
+<td> 3</td>
+<td> 4</td>
+<td> 5</td>
+<td> 6</td>
+</tr>
+
+<tr class="Jul">
+<td style="color: red; text-shadow: 1px 1px red;">7 </td>
+<td>8 </td>
+<td>9 </td>
+<td>10 </td>
+<td>11 </td>
+<td>12 </td>
+<td>13 </td>
+</tr>
+
+<tr class="Jul">
+<td style="color: red; text-shadow: 1px 1px red;">14 </td>
+<td>15 </td>
+<td>16 </td>
+<td>17 </td>
+<td>18 </td>
+<td>19 </td>
+<td>20 </td>
+</tr>
+
+<tr class="Jul">
+<td style="color: red; text-shadow: 1px 1px red;">21 </td>
+<td>22 </td>
+<td>23 </td>
+<td>24</td>
+<td>25 </td>
+<td>26 </td>
+<td>27 </td>
+</tr>
+
+<tr class="Jul">
+<td style="color: red; text-shadow: 1px 1px red;">28 </td>
+<td>29 </td>
+<td>30 </td>
+<td>31 </td>
+<td style="background-color: #e7f5fe"> </td>
+<td style="background-color: #e7f5fe"> </td>
+<td style="background-color: #e7f5fe"> </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+&nbsp
+</div>
+<hr>
+<div style="background-color: #ffeee6">
+&nbsp
+
+<table class="outerAug" align=center>
+<tr>
+	<td colspan=2 class="year"> <b><font style="color: #990000">2</font><font style="color: darkblue">0</font><font style="color:white">2</font><font style="color: #e6e600">4</font> </b> </td>
+	<td>
+<table class="innerAug" align=center>
+<tr class="August">	
+<th colspan="7"> AUGUST </th>
+</tr>
+
+<tr class="DayAug">
+<th style="background-color: #660000; color:white"> Su </th>
+<th> Mo </th>
+<th> Tu </th>
+<th> We </th>
+<th> Th </th>
+<th> Fr </th>
+<th> Sa </th>
+</tr>
+
+<tr class="Aug">
+<td style="background-color: #f2f2f2"><img src="new.png"></td>
+<td style="background-color: #f2f2f2"> <img src="full.png"> </td>
+<td style="background-color: #f2f2f2"> <img src="first.png"> </td>
+<td style="background-color: #f2f2f2"> <img src="last.png">  </td>
+<td>1  </td>
+<td>2</td>
+<td>3</td>
+</tr>
+
+<tr class="Aug">
+<td>4</td>
+<td>5</td>
+<td> 6</td>
+<td> 7</td>
+<td> 8</td>
+<td> 9</td>
+<td> 10</td>
+</tr>
+
+<tr class="Aug">
+<td style="color: red; text-shadow: 1px 1px red;">11 </td>
+<td>12 </td>
+<td>13</td>
+<td>14 </td>
+<td>15 </td>
+<td>16 </td>
+<td>17 </td>
+</tr>
+
+<tr class="Aug">
+<td style="color: red; text-shadow: 1px 1px red;">18 </td>
+<td>19 </td>
+<td>20 </td>
+<td class="ninoy" style="font-size: 9px; color: red;"><b><u>Ninoy Aquino Day</u></b></td>
+<td>22 </td>
+<td>23 </td>
+<td>24 </td>
+</tr>
+
+<tr class="Aug">
+<td style="color: red; text-shadow: 1px 1px red;">25 </td>
+<td class="hero" style="font-size: 9px; color: red;"><b><u>National Heroes Day</u></b></td>
+<td>27 </td>
+<td> 28 </td>
+<td>29 </td>
+<td>30 </td>
+<td>31 </td>
+</tr>
+
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+&nbsp
+</div>
+<hr>
+<div style="background-color: #d9d9d9">
+&nbsp
+
+<table class="outerSept" align=center>
+<tr>
+	<td colspan=2 class="year"> <b><font style="color: #332200">2</font><font style="color: #ffccb3">0</font><font style="color:#332200">2</font><font style="color: #ffccb3">4</font> </b> </td>
+	<td>
+<table class="innerSept" align=center>
+<tr class="September">	
+<th colspan="7"> SEPTEMBER </th>
+</tr>
+
+<tr class="DaySept">
+<th style="background-color: #994d00; color:white"> Su </th>
+<th> Mo </th>
+<th> Tu </th>
+<th> We </th>
+<th> Th </th>
+<th> Fr </th>
+<th> Sa </th>
+</tr>
+
+<tr class="Sept">
+<td style="background-color: #d3c097"><img src="new.png"></td>
+<td style="background-color: #d3c097"> <img src="full.png"> </td>
+<td style="background-color: #d3c097"> <img src="first.png"> </td>
+<td style="background-color: #d3c097"> <img src="last.png">  </td>
+<td style="background-color: #d3c097">  </td>
+<td style="background-color: #d3c097">  </td>
+<td style="background-color: #d3c097">  </td>
+</tr>
+
+<tr class="Sept">
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+<td>7</td>
+</tr>
+
+<tr class="Sept">
+<td style="color: red; text-shadow: 1px 1px red;">8</td>
+<td>9</td>
+<td>10</td>
+<td>11 </td>
+<td>12 </td>
+<td>13 </td>
+<td>14 </td>
+</tr>
+
+<tr class="Sept">
+<td style="color: red; text-shadow: 1px 1px red;">15 </td>
+<td>16 </td>
+<td>17 </td>
+<td>18 </td>
+<td>19 </td>
+<td>20 </td>
+<td>21 </td>
+</tr>
+
+<tr class="Sept">
+<td style="color: red; text-shadow: 1px 1px red;">22 </td>
+<td>23</td>
+<td>24 </td>
+<td>25</td>
+<td>26 </td>
+<td>27 </td>
+<td>28 </td>
+</tr>
+
+<tr class="Sept">
+<td style="color: red; text-shadow: 1px 1px red;">29 </td>
+<td>30</td>
+<td style="background-color: #d3c097"> </td>
+<td style="background-color: #d3c097"></td>
+<td style="background-color: #d3c097"></td>
+<td style="background-color: #d3c097"> </td>
+<td style="background-color: #d3c097"> </td>
+</tr>
+
+</table>
+</td>
+</tr>
+</table>
+
+&nbsp
+</div>
+<hr>
+<div style="background-color: #ffd480">
+&nbsp
+
+<table class="outerOct" align=center>
+<tr>
+	<td colspan=2 class="year"> <b><font style="color: #b36b00">2</font><font style="color: black">0</font><font style="color:#b36b00">2</font><font style="color: black">4</font> </b> </td>
+	<td>
+<table class="innerOct" align=center>
+<tr class="October">	
+<th colspan="7"> OCTOBER </th>
+</tr>
+
+<tr class="DayOct">
+<th style="background-color: #994d00; color:white"> Su </th>
+<th> Mo </th>
+<th> Tu </th>
+<th> We </th>
+<th> Th </th>
+<th> Fr </th>
+<th> Sa </th>
+</tr>
+
+<tr class="Oct">
+<td style="background-color: black"><img src="new.png"></td>
+<td style="background-color: black"> <img src="full.png"> </td>
+<td style="background-color: black"> <img src="first.png"> </td>
+<td style="background-color: black"> <img src="last.png">  </td>
+<td style="background-color: black">  </td>
+<td style="background-color: black"> </td>
+<td style="background-color: black"></td>
+</tr>
+
+<tr class="Oct">
+<td style="background-color: black"></td>
+<td style="background-color: black"></td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+</tr>
+
+<tr class="Oct">
+<td style="color: red; text-shadow: 1px 1px red;">6 </td>
+<td>7 </td>
+<td>8 </td>
+<td>9 </td>
+<td>10 </td>
+<td>11 </td>
+<td>12 </td>
+</tr>
+
+<tr class="Oct">
+<td style="color: red; text-shadow: 1px 1px red;">13 </td>
+<td>14 </td>
+<td>15 </td>
+<td>16 </td>
+<td>17 </td>
+<td>18 </td>
+<td>19 </td>
+</tr>
+
+<tr class="Oct">
+<td style="color: red; text-shadow: 1px 1px red;">20 </td>
+<td>21</td>
+<td>22 </td>
+<td>23</td>
+<td>24 </td>
+<td>25 </td>
+<td>26 </td>
+</tr>
+
+<tr class="Oct">
+<td style="color: red; text-shadow: 1px 1px red;">27 </td>
+<td>28 </td>
+<td>29 </td>
+<td>30 </td>
+<td>31 </td>
+<td style="background-color: black"> </td>
+<td style="background-color: black"> </td>
+</tr>
+
+</table>
+</td>
+</tr>
+</table>
+
+&nbsp
+</div>
+<hr>
+<div style="background-color: #e5ccff">
+&nbsp
+
+<table class="outerNov" align=center>
+<tr>
+	<td colspan=2 class="year"> <b><font style="color: #1f1f2d">2</font><font style="color: white">0</font><font style="color:#1f1f2d">2</font><font style="color: white">4</font> </b> </td>
+	<td>
+<table class="innerNov" align=center>
+<tr class="November">	
+<th colspan="7"> NOVEMBER </th>
+</tr>
+
+<tr class="DayNov">
+<th style="background-color: #33334d; color:white"> Su </th>
+<th> Mo </th>
+<th> Tu </th>
+<th> We </th>
+<th> Th </th>
+<th> Fr </th>
+<th> Sa </th>
+</tr>
+
+<tr class="Nov">
+<td style="background-color: #c6c6d7"><img src="new.png"></td>
+<td style="background-color: #c6c6d7"> <img src="full.png"> </td>
+<td style="background-color: #c6c6d7"> <img src="first.png"> </td>
+<td style="background-color: #c6c6d7"> <img src="last.png">  </td>
+<td style="background-color: #c6c6d7">  </td>
+<td class="saint"><b> <u> All Saints' Day</b> </u> </td>
+<td>2</td>
+</tr>
+
+<tr class="Nov">
+<td style="color: red; text-shadow: 1px 1px red"> 3</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+<td>7</td>
+<td>8</td>
+<td>9</td>
+</tr>
+
+<tr class="Nov">
+<td style="color: red; text-shadow: 1px 1px red;">10</td>
+<td>11</td>
+<td>12</td>
+<td>13 </td>
+<td>14 </td>
+<td>15 </td>
+<td>16 </td>
+</tr>
+
+<tr class="Nov">
+<td style="color: red; text-shadow: 1px 1px red;">17 </td>
+<td>18 </td>
+<td>19 </td>
+<td>20 </td>
+<td>21 </td>
+<td>22 </td>
+<td>23 </td>
+</tr>
+
+<tr class="Nov">
+<td style="color: red; text-shadow: 1px 1px red;">24 </td>
+<td>25</td>
+<td>26 </td>
+<td>27</td>
+<td>28 </td>
+<td>29 </td>
+<td class="boni"><b> <u> Bonifacio Day </u> <b> </td>
+</tr>
+
+</table>
+</td>
+</tr>
+</table>
+
+&nbsp
+</div>
+<hr>
+<div style="background-color: #ffd6cc">
+&nbsp
+
+<table class="outerDec" align=center>
+<tr>
+	<td colspan=2 class="year"> <b><font style="color: darkgreen">2</font><font style="color: crimson">0</font><font style="color:darkgreen">2</font><font style="color: crimson">4</font> </b> </td>
+	<td>
+<table class="innerDec" align=center>
+<tr class="December">	
+<th colspan="7"> DECEMBER </th>
+</tr>
+
+<tr class="DayDec">
+<th style="background-color: #4d0000; color:white"> Su </th>
+<th> Mo </th>
+<th> Tu </th>
+<th> We </th>
+<th> Th </th>
+<th> Fr </th>
+<th> Sa </th>
+</tr>
+
+<tr class="Dec">
+<td style="background-color: #ffb3b3"><img src="new.png"></td>
+<td style="background-color: #ffb3b3"> <img src="full.png"> </td>
+<td style="background-color: #ffb3b3"> <img src="first.png"> </td>
+<td style="background-color: #ffb3b3"> <img src="last.png">  </td>
+<td style="background-color: #ffb3b3">  </td>
+<td style="background-color: #ffb3b3"> </td>
+<td style="background-color: #ffb3b3"></td>
+</tr>
+
+<tr class="Dec">
+<td style="color: red; text-shadow: 1px 1px red"> 1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+<td>7</td>
+</tr>
+
+<tr class="Dec">
+<td style="color: red; text-shadow: 1px 1px red;">8</td>
+<td>9</td>
+<td>10</td>
+<td>11 </td>
+<td>12 </td>
+<td>13 </td>
+<td>14 </td>
+</tr>
+
+<tr class="Dec">
+<td style="color: red; text-shadow: 1px 1px red;">15</td>
+<td>16</td>
+<td>17 </td>
+<td>18 </td>
+<td>19 </td>
+<td>20 </td>
+<td>21 </td>
+</tr>
+
+<tr class="Dec">
+<td style="color: red; text-shadow: 1px 1px red;">22 </td>
+<td>23</td>
+<td>24 </td>
+<td class="xmas"><b> <u> Christmas Day</u> </b></td>
+<td>26 </td>
+<td>27 </td>
+<td>28 </td>
+</tr>
+
+<tr class="Dec">
+<td style="color: red; text-shadow: 1px 1px red;">29 </td>
+<td class="rizal"><b> <u> Rizal Day </b> </u> </td>
+<td>31 </td>
+<td style="background-color: #ffb3b3"></td>
+<td style="background-color: #ffb3b3"></td>
+<td style="background-color: #ffb3b3"></td>
+<td style="background-color: #ffb3b3"></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>
